@@ -1,25 +1,24 @@
-import { jsx as m } from "react/jsx-runtime";
-import { c as p } from "../clsx-F0OAuoLf.js";
-const l = ({
-  children: t,
-  gutter: s = 0,
-  justify: r = "start",
-  align: o = "stretch",
-  className: a,
-  ...c
+import { jsx as c } from "react/jsx-runtime";
+import { t as p } from "../bundle-mjs-zWg6SE9l.js";
+const w = ({
+  children: e,
+  gutter: r = 0,
+  justify: s = "start",
+  align: t = "stretch",
+  cols: o,
+  className: m,
+  ...a
 }) => {
-  const e = p(
-    "flex",
-    "flex-wrap",
-    {
-      [`gap-${s}`]: s,
-      [`justify-${r}`]: r,
-      [`items-${o}`]: o
-    },
-    a
+  const i = p(
+    "grid",
+    r ? `gap-${r}` : "",
+    o ? `grid-cols-${o}` : "",
+    s ? `justify-${s}` : "",
+    t ? `items-${t}` : "",
+    m
   );
-  return /* @__PURE__ */ m("div", { className: e, ...c, children: t });
+  return /* @__PURE__ */ c("div", { className: i, ...a, children: e });
 };
 export {
-  l as Row
+  w as Row
 };

@@ -1,21 +1,19 @@
-import { jsx as a } from "react/jsx-runtime";
-import { c as m } from "../clsx-F0OAuoLf.js";
-const p = ({
+import { jsx as l } from "react/jsx-runtime";
+import { t as m } from "../bundle-mjs-zWg6SE9l.js";
+const n = ({
   children: r,
-  span: c,
-  offset: o,
-  className: s,
-  ...l
+  span: o,
+  offset: s,
+  className: t,
+  ...c
 }) => {
-  const t = m(
-    {
-      [`col-span-${c}`]: c,
-      [`col-start-${o ? o + 1 : ""}`]: o
-    },
-    s
+  const e = m(
+    o ? `col-span-${o}` : "",
+    "",
+    t
   );
-  return /* @__PURE__ */ a("div", { className: t, ...l, children: r });
+  return /* @__PURE__ */ l("div", { className: e, ...c, children: r });
 };
 export {
-  p as Col
+  n as Col
 };

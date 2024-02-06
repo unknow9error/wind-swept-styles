@@ -1,4 +1,6 @@
-import { defaultStyles as f } from "./constants/styles.js";
+import { defaultStyles as o } from "./constants/styles.js";
+import { getDynamicStyle as f } from "./function.js";
 export {
-  f as defaultStyles
+  o as defaultStyles,
+  f as getDynamicStyle
 };
