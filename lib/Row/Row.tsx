@@ -1,9 +1,26 @@
-import clsx from 'clsx';
+import { twMerge } from 'tailwind-merge';
 import { RowInterface } from './Row.types';
 
-export const Row: RowInterface = ({ children, className, ...rest }) => {
+export const Row: RowInterface = ({
+    children,
+    gutter = 0,
+    justify = 'start',
+    align = 'stretch',
+    cols,
+    className,
+    ...props
+}) => {
+    const rowClass = twMerge(
+        'grid',
+        gutter ? `gap-${gutter}` : '',
+        cols ? `grid-cols-${cols}` : '',
+        justify ? `justify-${justify}` : '',
+        align ? `items-${align}` : '',
+        className
+    );
+
     return (
-        <div className={clsx(className, 'w-6 h-6 bg-black')} {...rest}>
+        <div className={rowClass} {...props}>
             {children}
         </div>
     );

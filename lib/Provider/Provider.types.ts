@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
+import { ComponentName } from '../types';
 
 export interface ProviderConfig {}
 
@@ -11,7 +12,7 @@ export interface ThemeConfig {
     background?: string;
 }
 
-export type ProviderThemeComponent = 'row' | 'col' | 'table' | 'global';
+export type ProviderThemeComponent = ComponentName | 'global';
 
 export type ProviderTheme = Record<ProviderThemeComponent, ThemeConfig>;
 
