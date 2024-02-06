@@ -1,4 +1,6 @@
-import { defaultStyles as f } from "./styles.js";
+import { defaultStyles as r } from "./styles.js";
+import { icons as f } from "./icons.js";
 export {
-  f as defaultStyles
+  r as defaultStyles,
+  f as icons
 };

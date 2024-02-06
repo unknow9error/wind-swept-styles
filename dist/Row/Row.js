@@ -1,23 +1,25 @@
 import { jsx as c } from "react/jsx-runtime";
-import { t as p } from "../bundle-mjs-zWg6SE9l.js";
+import { t as d } from "../bundle-mjs-zWg6SE9l.js";
 const w = ({
-  children: e,
+  children: m,
   gutter: r = 0,
   justify: s = "start",
   align: t = "stretch",
   cols: o,
-  className: m,
-  ...a
+  className: e,
+  ...i
 }) => {
-  const i = p(
+  const a = d(
     "grid",
+    "w-full",
     r ? `gap-${r}` : "",
-    o ? `grid-cols-${o}` : "",
+    "grid-cols-1",
+    o ? `sm:grid-cols-${o}` : "",
     s ? `justify-${s}` : "",
     t ? `items-${t}` : "",
-    m
+    e
   );
-  return /* @__PURE__ */ c("div", { className: i, ...a, children: e });
+  return /* @__PURE__ */ c("div", { className: a, ...i, children: m });
 };
 export {
   w as Row
