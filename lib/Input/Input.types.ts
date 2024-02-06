@@ -3,8 +3,9 @@ import { FC, InputHTMLAttributes } from 'react';
 import { input } from './Input.cva';
 
 export interface InputProps
-    extends InputHTMLAttributes<HTMLInputElement>,
+    extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix'>,
         VariantProps<typeof input> {
-    icon?: React.ReactNode;
+    prefix?: JSX.Element | React.ReactNode;
+    suffix?: JSX.Element | React.ReactNode;
 }
 export interface InputInterface extends FC<InputProps> {}

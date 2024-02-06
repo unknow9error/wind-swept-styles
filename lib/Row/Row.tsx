@@ -12,8 +12,10 @@ export const Row: RowInterface = ({
 }) => {
     const rowClass = twMerge(
         'grid',
+        'w-full',
         gutter ? `gap-${gutter}` : '',
-        cols ? `grid-cols-${cols}` : '',
+        'grid-cols-1',
+        cols ? `sm:grid-cols-${cols}` : '',
         justify ? `justify-${justify}` : '',
         align ? `items-${align}` : '',
         className
