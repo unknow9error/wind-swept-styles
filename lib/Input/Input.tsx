@@ -7,8 +7,13 @@ export const Input: InputInterface = ({
     prefix,
     suffix,
     className,
+    label,
     ...rest
 }) => {
+    const suffixCn = twMerge('absolute right-0 pr-2 h-3/5', `text-${scale}`);
+
+    const preffixCn = twMerge('absolute left-0 pl-2 h-3/5', `text-${scale}`);
+
     return (
         <div
             className={twMerge(
@@ -19,7 +24,7 @@ export const Input: InputInterface = ({
                 className
             )}
         >
-            {prefix && <div className="absolute left-0 pl-2">{prefix}</div>}
+            {prefix && <div className={preffixCn}>{prefix}</div>}
             <input
                 className={twMerge(
                     input({ scale }),
@@ -28,16 +33,7 @@ export const Input: InputInterface = ({
                 )}
                 {...rest}
             />
-            {suffix && (
-                <div
-                    className={twMerge(
-                        'absolute right-0 pr-2',
-                        `text-${scale}`
-                    )}
-                >
-                    {suffix}
-                </div>
-            )}
+            {suffix && <div className={suffixCn}>{suffix}</div>}
         </div>
     );
 };

@@ -3,4 +3,7 @@ export * from './Col';
 export * from './Provider';
 export * from './Input';
 export * from './Card';
-export * from './utils'
+export * from './utils';
+export * from './Layouts';
+export * from './Button';
+export * from './Select';

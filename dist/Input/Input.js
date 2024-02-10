@@ -1,48 +1,43 @@
-import { jsxs as i, jsx as r } from "react/jsx-runtime";
-import { t as l } from "../bundle-mjs-zWg6SE9l.js";
-import { input as o } from "./Input.cva.js";
-const d = ({
-  scale: s,
-  prefix: t,
-  suffix: e,
-  className: a,
-  ...m
-}) => /* @__PURE__ */ i(
-  "div",
-  {
-    className: l(
-      "relative",
-      "h-full",
-      "flex",
-      "items-center",
-      a
-    ),
-    children: [
-      t && /* @__PURE__ */ r("div", { className: "absolute left-0 pl-2", children: t }),
-      /* @__PURE__ */ r(
-        "input",
-        {
-          className: l(
-            o({ scale: s }),
-            t ? "pl-9" : "",
-            e ? "pr-9" : ""
-          ),
-          ...m
-        }
+import { jsxs as m, jsx as s } from "react/jsx-runtime";
+import { t } from "../bundle-mjs-zWg6SE9l.js";
+import { input as p } from "./Input.cva.js";
+const f = ({
+  scale: e,
+  prefix: r,
+  suffix: l,
+  className: n,
+  label: c,
+  ...i
+}) => {
+  const o = t("absolute right-0 pr-2 h-3/5", `text-${e}`), a = t("absolute left-0 pl-2 h-3/5", `text-${e}`);
+  return /* @__PURE__ */ m(
+    "div",
+    {
+      className: t(
+        "relative",
+        "h-full",
+        "flex",
+        "items-center",
+        n
       ),
-      e && /* @__PURE__ */ r(
-        "div",
-        {
-          className: l(
-            "absolute right-0 pr-2",
-            `text-${s}`
-          ),
-          children: e
-        }
-      )
-    ]
-  }
-);
+      children: [
+        r && /* @__PURE__ */ s("div", { className: a, children: r }),
+        /* @__PURE__ */ s(
+          "input",
+          {
+            className: t(
+              p({ scale: e }),
+              r ? "pl-9" : "",
+              l ? "pr-9" : ""
+            ),
+            ...i
+          }
+        ),
+        l && /* @__PURE__ */ s("div", { className: o, children: l })
+      ]
+    }
+  );
+};
 export {
-  d as Input
+  f as Input
 };

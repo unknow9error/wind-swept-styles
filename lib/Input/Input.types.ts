@@ -7,5 +7,6 @@ export interface InputProps
         VariantProps<typeof input> {
     prefix?: JSX.Element | React.ReactNode;
     suffix?: JSX.Element | React.ReactNode;
+    label?: string;
 }
 export interface InputInterface extends FC<InputProps> {}
